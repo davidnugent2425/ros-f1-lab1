@@ -11,8 +11,8 @@ class ScanListener:
         # a subcriber that listens to 
         self.scan_sub = rospy.Subscriber('scan', LaserScan,
                 self.scan_callback, queue_size=1)
-        self.closest_pub = rospy.Publisher('closest_point', Float64, queue_size=10)
-        self.farthest_pub = rospy.Publisher('farthest_point', Float64,
+        self.closest_pub = rospy.Publisher('closest_range', Float64, queue_size=10)
+        self.farthest_pub = rospy.Publisher('farthest_range', Float64,
                                                             queue_size=10)
 
     def scan_callback(self, data):
